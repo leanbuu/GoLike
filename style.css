@@ -1,0 +1,387 @@
+body{
+    font-family: "Be Vietnam Pro", sans-serif;
+}
+
+.color_primary{
+    color: #D9302C;
+}
+
+.color_primary:hover{
+    color: #D9302C !important;
+}
+
+.bg_color_primary1{
+    background-color: #F9FAFB;
+    display: flex;
+    justify-content: center;
+}
+
+.bg_color_primary2{
+    background-color: #ec9795;
+}
+
+.bg_color_primary3{
+    background-color: #D9302C1A;
+}
+
+.bg_color_btn_update{
+    border: 1px solid #34C759;
+    background-color: #EBF9EE;
+    height: 30px
+}
+
+.header_notification_number{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 100px;
+    border: solid 1px #ffffff;
+    background-color: #D9302C;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 14px;
+    text-align: center;
+    width: 14px;
+    height: 14px;
+    color: #ffffff;
+}
+
+.bg_list_item{
+    background-color: #ffffff;
+    box-shadow: 0px 0px 6px -2px #10182805;
+    box-shadow: 0px 0px 12px -4px #1018280A;
+}
+
+.bg_btn_help{
+    border: 2px solid #EC692D59;
+    font-size: 14px;
+    color: #444444;
+    cursor: pointer;
+    background-color: #ffffff;
+    right: 32px;
+    bottom: 36px;
+}
+
+.border_bot_custom{
+    border-bottom: 0.5px solid #EAECF0;
+}
+
+.custom_text1{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #333333;
+}
+
+.custom_text2{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #B6B6B6;
+}
+
+.custom_text3{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #34C759;
+}
+
+.custom_text4{
+    font-size: 12px;
+    line-height: 10px;
+    text-align: left;
+    color: #444444;
+}
+
+.custom_text5{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #34C759;
+}
+
+.custom_text6{
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 14px;
+    text-align: left;
+    color: #B6B6B6;
+}
+
+.custom_text7{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
+    color: #333333;
+}
+
+.custom_text8{
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+}
+
+.custom_text9{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #333333;
+}
+
+.custom_text10{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: center;
+    color: #B6B6B6;
+}
+
+.text_click{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: left;
+    color: #ffffff;
+}
+
+.text_no_wrap{
+    white-space: nowrap;     
+    overflow: hidden;         
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.bg_custom1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(22, 25, 29, 0) 50%, rgba(22, 25, 29, 0.6) 65.85%, #16191D 93.43%);
+}
+
+.bg_custom2{
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #A7B2BE;
+    cursor: pointer;
+}
+
+.text_custom_qc{
+    position: absolute;
+    bottom: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+    width: 100%;
+}
+
+.bg_custom3{
+    background-color: #34C7591A;
+    border-radius: 100px;
+    height: 6px;
+    width: 100%;
+}
+
+.bg_custom4{
+    background-color: #34C759;
+    border-radius: 100px;
+    height: 6px;
+    width: 50%;
+}
+
+.bg_custom_reduce{
+    background-color: #EC692D59;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg_custom_increase{
+    background-color: #8fe0a4;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0px;
+}
+
+.container_body{
+    max-width: 1464px !important;
+}
+
+.mr-0{
+    margin: 0;
+}
+
+#navbarNav{
+    flex-basis: auto;
+}
+
+.img_profile, .img_profile_header{
+    width: 42px;
+    height: 42px;
+}
+
+.img_qc{
+    width: 100%;
+    height: auto;
+}
+
+.img_custom1{
+    width: 24px;
+    height: 24px;
+}
+
+.img_custom2{
+    width: 10px;
+    height: 10px;
+}
+
+.img_custom3{
+    width: 28px;
+    height: 28px;
+}
+
+.text_custom1{
+    min-width: 9px
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.font_12{
+    font-size: 12px;
+}
+
+.bg_nav_bot{
+    bottom: 0;
+    background-color: #ffffff;
+}
+
+.img_custom_bot{
+    width: 26px;
+    height: 26px;
+}
+
+.boder_nav_bot{
+    border-top: 2px solid #D9302C;
+}
+
+.div_click{
+    margin-right: 12px;
+}
+
+@media screen and (max-width: 991px) {
+    .header_notification_number{
+        right: 0px;
+    }
+    .bg_btn_help{
+        border-radius: 50% !important;
+        bottom: 76px;
+    }
+    .text_custom_qc{
+        font-size: 20px;
+        bottom: 32px;
+    }
+    .text_click{
+        font-size: 24px;
+    }
+    .img_click{
+        width: 36px;
+        height: 36px;
+    }
+    .img_profile_header{
+        width:42px;
+        height: 42px;
+        border-radius: 4px !important;
+    }
+    .bg_num_coin{
+        padding: 2px 12px !important;
+    }
+    .div_click{
+        margin-right: 12px !important;
+    }
+    .div_left_menu{
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header_notification_number{
+        right: -5px;
+    }
+    .div_click{
+        margin-right: 12px !important;
+    }
+    .custom_text8{
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        text-align: center;
+    }
+    .img_click{
+        width: 30px;
+        height: 30px;
+    }
+    .text_custom_qc{
+        font-size: 16px;
+        bottom: 20px;
+    }
+    .img_profile_header{
+        width:24px;
+        height: 24px;
+        border-radius: 4px !important;
+    }
+    .img_coin_header{
+        width: 14px;
+        height: 14px;
+    }
+    .text_click{
+        font-size: 16px;
+    }
+    .img_logo{
+        height: 24px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .text_click{
+        font-size: 12px;
+    }
+    .img_click{
+        width: 24px;
+        height: 24px;
+    }
+    .text_custom_qc{
+        font-size: 12px;
+        bottom: 16px;
+    }
+    .navbar-toggler-icon{
+        width: 1.25em;
+        height: 1.25em;
+    }
+    .navbar-nav{
+        gap: 12px !important;
+    }
+}
