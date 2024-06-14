@@ -83,11 +83,15 @@ body{
 .bg_popup_login{
     padding: 40px ;
     border-radius: 36px;
-    top: 10%;
+    top: 15% !important;
     left: 33%;
     background-color: #ffffff;
     box-shadow: 0px 0px 8px -4px #10182808;
     box-shadow: 0px 0px 24px -4px #10182814;
+}
+
+.bg_popup_signup{
+    top: 12% !important;
 }
 
 .bg_popup_checkotp{
@@ -473,6 +477,14 @@ body{
     line-height: 24px;
     text-align: left;
     color: #333333;
+}
+
+.custom_text_input{
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+    color: #444444;
 }
 
 .img_logoEarn{
@@ -883,6 +895,11 @@ a{
     }
 }
 
+.btn_loginGG{
+    flex-grow: 1;
+    justify-content: center;
+}
+
 @media screen and (max-width: 1200px) {
     .bg_popup_login{
         top: calc(50% - 280px);
@@ -1021,6 +1038,11 @@ a{
         line-height: 32px;
         text-align: center;
         color: #333333;
+    }
+
+    .cb_mobile{
+        width: 20px !important;
+        height: 20px;
     }
 }
 
