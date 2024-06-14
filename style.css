@@ -508,6 +508,50 @@ a{
     text-decoration: none !important;
 }
 
+.cb_ok {
+    position: absolute;  
+    opacity: 0;         
+    cursor: pointer;     
+}
+
+
+.custom-checkbox {
+    display: flex;      
+    align-items: center; 
+    position: relative;  
+}
+
+.checkmark {
+    display: block;               
+    width: 20px;               
+    height: 20px;                 
+    background-color: #fff;     
+    border-radius: 4px;          
+    position: relative;      
+    border: 1px solid #444444;   
+    transition: background-color 0.3s; 
+}
+
+.cb_ok:checked + .checkmark {
+    background-color: #D9302C;  
+    border: 0px solid #444444;  
+}
+
+.cb_ok:checked + .checkmark::after {
+    content: '';                
+    position: absolute;          
+    left: 7px;                    
+    top: 3px;                
+    width: 6px;                  
+    height: 12px;               
+    border: solid white;         
+    border-width: 0 2px 2px 0;   
+    transform: rotate(45deg);     
+}
+.checkmark {
+    width: 20px;                 
+    height: 20px;               
+}
 
 .text_click{
     font-size: 14px;
@@ -1096,7 +1140,8 @@ a{
         width: 320px;
     }
     .bg_custom12{
-        width: 320px;
+        max-width: 320px;
+        width: 100%;
     }
     
 }
