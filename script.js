@@ -1,29 +1,62 @@
 document.addEventListener("DOMContentLoaded", function() {
     let currentAddTask = 0;
+    let currentEarn = 0;
 
     const contentAddTasks = ['add_task1', 'add_task2'];
 
     const contentEarns = ['earn_1', 'earn_2', 'earn_3'];
 
-    const btnBack = document.getElementById('btn_backAddTask');
-    const btnNext = document.getElementById('btn_nextAddTask');
+    const btnBack = document.getElementById('btn_back');
+    const btnNext = document.getElementById('btn_next');
     const imgBack = btnBack.querySelector('img');
     const imgNext = btnNext.querySelector('img'); 
 
-    const indicatorsContainer = document.querySelector('.list_point_bot_addTask');
+    const indicatorsContainer = document.querySelector('.list_point_bot');
 
     function showDiv(index) {
         contentAddTasks.forEach(id => {
-            document.getElementById(id).style.display = 'none';
+            content = document.getElementById(id)
+            if(content != null)
+                document.getElementById(id).style.display = 'none';
         });
-
-        document.getElementById(contentAddTasks[index]).style.display = 'block';
-        updateButtonStates();
-        updateIndicators(index);
+        content1 = document.getElementById(contentAddTasks[index])
+        if(content1 != null){
+            document.getElementById(contentAddTasks[index]).style.display = 'block';
+            updateButtonStates('task');
+            updateIndicators(index, 'task');
+        }
     }
 
-    function updateButtonStates() {
-        if (currentAddTask === 0) {
+    function showDiv1(index) {
+        contentEarns.forEach(id => {
+            content = document.getElementById(id)
+            if(content != null)
+                document.getElementById(id).style.display = 'none';
+        });
+
+        content1 = document.getElementById(contentEarns[index])
+        if(content1 != null){
+            document.getElementById(contentEarns[index]).style.display = 'block';
+            console.log(index)
+            if(index === contentEarns.length - 1){
+                document.getElementById('earn_0').style.display = 'none'
+            }
+            else{
+                document.getElementById('earn_0').style.display = 'flex'
+            }
+            updateButtonStates('earn');
+            updateIndicators(index, 'earn');
+        }
+    }
+
+    function updateButtonStates(page) {
+        let index = currentAddTask
+        let content = contentAddTasks
+        if(page == 'earn'){
+            index = currentEarn
+            content = contentEarns
+        }
+        if (index === 0) {
             btnBack.classList.remove('bg_custom_bot_show');
             btnBack.classList.add('bg_custom_bot_hide');
             btnBack.classList.remove('custom_text22');
@@ -37,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
             imgBack.src = './icon/btn_botLeft1.svg'; 
         }
 
-        if (currentAddTask === contentAddTasks.length - 1) {
+        if (index === content.length - 1) {
             btnNext.classList.remove('bg_custom_bot_show');
             btnNext.classList.add('bg_custom_bot_hide');
             btnNext.classList.remove('custom_text22');
@@ -52,27 +85,43 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function updateIndicators(index) {
+    function updateIndicators(index, page) {
         // Xóa tất cả các chỉ báo hiện tại
         indicatorsContainer.innerHTML = '';
 
-        // Thêm các chỉ báo mới dựa trên thẻ hiện tại
-        contentAddTasks.forEach((id, idx) => {
-            const indicator = document.createElement('img');
-            if (idx === index) {
-                indicator.src = './icon/point_red.svg'; // Điểm chỉ báo đang hoạt động
-            } else {
-                indicator.src = './icon/point_dark.svg'; // Điểm chỉ báo không hoạt động
-            }
-            indicatorsContainer.appendChild(indicator);
-        });
+        if(page == 'task'){
+            contentAddTasks.forEach((id, idx) => {
+                const indicator = document.createElement('img');
+                if (idx === index) {
+                    indicator.src = './icon/point_red.svg'; // Điểm chỉ báo đang hoạt động
+                } else {
+                    indicator.src = './icon/point_dark.svg'; // Điểm chỉ báo không hoạt động
+                }
+                indicatorsContainer.appendChild(indicator);
+            });
+        }else{
+            contentEarns.forEach((id, idx) => {
+                const indicator = document.createElement('img');
+                if (idx === index) {
+                    indicator.src = './icon/point_red.svg'; // Điểm chỉ báo đang hoạt động
+                } else {
+                    indicator.src = './icon/point_dark.svg'; // Điểm chỉ báo không hoạt động
+                }
+                indicatorsContainer.appendChild(indicator);
+            });
+        }
     }
 
     showDiv(currentAddTask);
+    showDiv1(currentEarn);
     btnNext.addEventListener('click', function() {
         if (currentAddTask < contentAddTasks.length - 1) {
             currentAddTask++;
             showDiv(currentAddTask);
+        }
+        if (currentEarn < contentEarns.length - 1) {
+            currentEarn++;
+            showDiv1(currentEarn);
         }
     });
 
@@ -80,6 +129,10 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentAddTask > 0) {
             currentAddTask--;
             showDiv(currentAddTask);
+        }
+        if (currentEarn > 0) {
+            currentEarn--;
+            showDiv1(currentEarn);
         }
     });
 });

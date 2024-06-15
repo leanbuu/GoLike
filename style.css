@@ -508,12 +508,15 @@ a{
     text-decoration: none !important;
 }
 
+#earn_0{
+    min-height: 500px;
+}
+
 .cb_ok {
     position: absolute;  
     opacity: 0;         
     cursor: pointer;     
 }
-
 
 .custom-checkbox {
     display: flex;      
@@ -977,6 +980,12 @@ a{
     }
     .img_close{
         width: 20px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #add_task2 {
+        display: block !important;
     }
 }
 
