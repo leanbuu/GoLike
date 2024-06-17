@@ -83,16 +83,23 @@ body{
 .bg_popup_login{
     padding: 40px ;
     border-radius: 36px;
-    top: 15% !important;
+    top: calc(50% - 325px);
     left: 33%;
     background-color: #ffffff;
     box-shadow: 0px 0px 8px -4px #10182808;
     box-shadow: 0px 0px 24px -4px #10182814;
 }
 
-.bg_popup_signup{
-    top: 16% !important;
+.bg_popup_login1{
+    padding: 40px ;
+    border-radius: 36px;
+    top: calc(50% - 400px);
+    left: 33%;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 8px -4px #10182808;
+    box-shadow: 0px 0px 24px -4px #10182814;
 }
+
 
 .bg_popup_checkotp{
     padding: 40px ;
@@ -388,6 +395,14 @@ body{
     color: #D9302C;
 }
 
+.custom_text29::placeholder {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #D9302C;
+}
+
 .custom_text30{
     font-size: 14px;
     font-weight: 500;
@@ -397,6 +412,14 @@ body{
 }
 
 .custom_text31{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #444444;
+}
+
+.custom_text31::placeholder {
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
@@ -669,6 +692,18 @@ a{
     height: 122px;
 }
 
+.cb_arrow{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 40px;
+    background-image: url('./icon/body_altArrow.svg');
+    background-size: 30px; 
+    background-repeat: no-repeat;
+    background-position: calc(100% - 10px) center; 
+    cursor: pointer;
+}
+
 .cb_point{
     padding: 10px 14px;
     background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
@@ -682,10 +717,6 @@ a{
     height: 8px;
     background-color: #D9302C1A;
     border-radius: 100px;
-}
-
-.cb_listSpeed1{
-    width: 350px;
 }
 
 .item_listSpeed{
@@ -804,6 +835,10 @@ a{
     gap: 8px !important;
 }
 
+.mb_6{
+    margin-bottom: 60px;
+}
+
 .mb_auto{
     margin-bottom: 100px !important;
 }
@@ -889,6 +924,15 @@ a{
     padding: 10px 12px;
     border-radius: 10px;
     background-color: #B6B6B6;
+    border: none;
+}
+
+.boder_none{
+    border: none !important;
+}
+
+.clear_btn{
+    background-color: #ffffff;
 }
 
 .bg_custom12{
@@ -952,12 +996,88 @@ a{
     justify-content: center;
 }
 
+.cb_listSpeed1 {
+    position: relative;
+    width: 350px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cb_listSpeed1 img {
+    position: absolute;
+    top: 0;
+}
+.slider-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px; /* Để có khoảng trống phía trên cho các biểu tượng */
+}
+.slider-track {
+    width: 100%;
+    height: 8px;
+    background: #D9302C1A;
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+.slider-fill {
+    height: 8px;
+    background: #D9302C;
+    border-radius: 100px ;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    pointer-events: none;
+
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: transparent; /* Đặt nền trong suốt để thấy phần màu khác */
+    outline: none;
+    position: relative;
+    z-index: 3; /* Đảm bảo slider ở trên cùng */
+    align-items: center;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0px;
+    height: 0px;
+    background: #D9302C;
+    cursor: pointer;
+    z-index: 4;
+    position: relative;
+}
+
+.icon-0 {
+    left: calc(0%); 
+}
+.icon-100 {
+    left: calc(100% - 12px); 
+}
+.selected-point {
+    left: calc(50% - 10px); /* Vị trí ban đầu ở giữa (50%) */
+    transition: left 0.2s; /* Thêm hiệu ứng chuyển động khi di chuyển */
+}
+
 @media screen and (max-width: 1200px) {
     .bg_popup_login{
-        top: calc(50% - 280px);
+        top: calc(50% - 220px);
         left: 4.1%;
         padding: 32px 16px;
     }
+    .bg_popup_login1{
+        padding: 32px 16px;
+        top: calc(50% - 320px);
+        left: 4.1%;
+    }
+    
     .container_login{
         max-width: 1440px !important;
         max-height: none;

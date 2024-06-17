@@ -135,4 +135,29 @@ document.addEventListener("DOMContentLoaded", function() {
             showDiv1(currentEarn);
         }
     });
+
+
+
+    const slider = document.getElementById('pointSlider');
+    const selectedPoint = document.querySelector('.selected-point');
+    const sliderFill = document.querySelector('.slider-fill');
+    const endPointImage = document.getElementById('endPointImage');
+    function updateSelectedPoint(value) {
+        selectedPoint.style.left = `calc(${value}% - 10px)`;
+        sliderFill.style.width = `${value}%`;
+
+        if (value == 100) {
+            endPointImage.style.display = "none"
+        } else {
+            endPointImage.style.display = "block"
+        }
+    }
+
+    let initialValue = slider.value;
+    updateSelectedPoint(initialValue);
+
+    slider.addEventListener('input', (event) => {
+        let value = event.target.value;
+        updateSelectedPoint(value);
+    });
 });

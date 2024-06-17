@@ -43,7 +43,7 @@
                                     Không nên thêm cùng một liên kết nhiều lần cho cùng một thao tác. Trong trường hợp này, bạn sẽ chỉ mất điểm và không nhận được kết quả bổ sung nào.
                                 </div>
                             </div>
-                            <div id="add_task2">
+                            <div id="add_task2" class="mb_auto1">
                                 <div class="d-flex gap-2 flex-column align-items-center mt-4">
                                     <div class="d-flex gap-2">
                                         <div class="custom_text23">Nhiệm vụ P2P mới</div>
@@ -59,9 +59,10 @@
                                                 <div class="custom_text26 text-end">“Loại nhiệm vụ”</div>
                                             </div>
                                             <div class="custom_text21 d-none d-lg-block">Kiểu</div>
-                                            <div class="cb_chosse d-flex justify-content-between pointer">
-                                                <div class="custom_text20">Người theo dõi Tiktok</div>
-                                                <img src="./icon/body_altArrow.svg">
+                                            <div class="d-flex justify-content-between">
+                                                <select class="cb_chosse cb_arrow custom_text20 pointer">
+                                                    <option class="custom_text20 text-start" value="Người theo dõi Tiktok">Người theo dõi Tiktok</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="custom_text26 d-none d-lg-block">“Loại nhiệm vụ”</div>
@@ -75,9 +76,10 @@
                                                 <div class="custom_text26 text-end">“Hạng mục nhiệm vụ”</div>
                                             </div>
                                             <div class="custom_text21 d-none d-lg-block">Loại</div>
-                                            <div class="cb_chosse d-flex justify-content-between pointer">
-                                                <div class="custom_text20">Người theo dõi Tiktok</div>
-                                                <img src="./icon/body_altArrow.svg">
+                                            <div class="d-flex justify-content-between pointer">
+                                                <select class="cb_chosse cb_arrow custom_text20 pointer">
+                                                    <option class="custom_text20 text-start" value="Người theo dõi Tiktok">Người theo dõi Tiktok</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="custom_text26 d-none d-lg-block">“Hạng mục nhiệm vụ”</div>
@@ -120,13 +122,15 @@
                                             </div>
                                             <div class="custom_text21 d-none d-lg-block">Tốc độ</div>
                                             <div class="d-flex flex-column gap-2">
-                                                <div class="cb_listSpeed d-flex ">
-                                                    <div class="item_listSpeed"></div>
-                                                </div>
-                                                <div class="cb_listSpeed1 d-flex justify-content-between">
-                                                    <img class="ic_rocket" src="./icon/body_rocket.svg">
-                                                    <img class="ic_rocket1" src="./icon/body_rocket.svg">
-                                                    <img src="./icon/body_rocket1.svg">
+                                                <div class="cb_listSpeed1">
+                                                    <img class="ic_rocket icon-0" src="./icon/body_rocket.svg" alt="Start Point">
+                                                    <img class="ic_rocket1 selected-point" src="./icon/body_rocket.svg" alt="Selected Point">
+                                                    <img class="ic_rocket1 icon-100" src="./icon/body_rocket1.svg" alt="End Point" id="endPointImage">
+                                                    <div class="slider-container">
+                                                        <div class="slider-track"></div>
+                                                        <div class="slider-fill"></div> <!-- Phần tử cho phần màu đỏ từ 0 đến điểm hiện tại -->
+                                                        <input type="range" min="0" max="100" value="50" class="slider" id="pointSlider">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -141,41 +145,43 @@
                                                 <div class="custom_text26 text-end">Số tiền này sẽ được trừ vào số dư điểm của bạn (Bạn thanh toán trước)</div>
                                             </div>
                                             <div class="custom_text21 d-none d-lg-block">Điểm</div>
-                                            <div class="cb_point d-flex justify-content-between pointer">
-                                                <div class="custom_text29">70 Point</div>
+                                            <div class="d-flex justify-content-between pointer">
+                                                <input class="custom_text29 cb_point text-danger" placeholder="70 Điểm">
                                             </div>
                                         </div>
                                         <div class="custom_text26 d-none d-lg-block">Số tiền này sẽ được trừ vào số dư điểm của bạn (Bạn thanh toán trước)</div>
                                     </div>
                                 </div>
-                                <div class="d-flex d-lg-none justify-content-center my-4 align-items-center flex-column">
+                                <div class="d-flex justify-content-center my-4 align-items-center flex-column">
                                     <div class="bg_custom10 d-flex gap-3 align-items-center">
                                         <div class="d-flex justify-content-between flex-column flex-lg-row gap-3  align-items-center">
                                             <div class="col-12 d-flex d-lg-none justify-content-between align-items-center">
                                                 <div class="custom_text21 text-a text-start">Số lượng</div>
                                                 <div class="custom_text26 text-end">Số lượng tổng số nhiệm vụ đã hoàn thành bạn muốn nhận (>=1)</div>
                                             </div>
-                                            <div class="cb_point d-flex justify-content-between pointer">
-                                                <div class="custom_text31">1</div>
+                                            <div class="custom_text21 d-none d-lg-block">Số lượng</div>
+                                            <div class="d-flex justify-content-between pointer">
+                                                <input class="custom_text31 cb_point" placeholder="1">
                                             </div>
                                         </div>
+                                        <div class="custom_text26 d-none d-lg-block">Số lượng tổng số nhiệm vụ đã hoàn thành bạn muốn nhận (>=1)</div>
                                     </div>
                                 </div>
-                                <div class="d-flex d-lg-none justify-content-center my-4 flex-column justify-content-center align-items-center">
-                                    <div class="bg_custom10 d-flex gap-3 justify-content-center">
-                                        <div class="d-flex justify-content-between flex-column flex-lg-row gap-3 ">
+                                <div class="d-flex justify-content-center my-4 flex-column justify-content-center align-items-center">
+                                    <div class="d-flex gap-3 justify-content-center">
+                                        <div class="d-flex justify-content-between flex-column flex-lg-row gap-3">
                                             <div class="d-flex gap-3 align-items-start justify-content-center bg_custom12 col-12">
-                                                <div class="d-flex gap-2 col-6 bg_custom11">
+                                                <button class="d-flex gap-2 col-6 bg_custom11 ">
                                                     <img src="./icon/body_bolt2.svg">
                                                     <div class="custom_text22">Tạo nhiệm vụ</div>
-                                                </div>
+                                                </button>
                                                 <div class="col-6 custom_text32">Sau khi nhấp vào, điểm của bạn sẽ được chuyển đổi thành AMF Tokens để hoàn thành việc tạo nhiệm vụ. Quá trình này là không thể đảo ngược</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex d-lg-none justify-content-center my-4 flex-column justify-content-center align-items-center">
-                                    <div class="bg_custom10 d-flex gap-3 justify-content-center">
+                                <div class="d-flex justify-content-center my-4 flex-column justify-content-center align-items-center">
+                                    <div class="d-flex gap-3 justify-content-center">
                                         <div class="d-flex gap-2 align-items-start bg_custom12 ">
                                             <label class="custom-checkbox">
                                                 <input type="checkbox" class="cb_ok">
@@ -185,14 +191,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="d-flex d-lg-none justify-content-center my-4 flex-column justify-content-center align-items-center">
+                                <div class="d-flex justify-content-center my-4 flex-column justify-content-center align-items-center">
                                     <div class="bg_custom10 d-flex gap-3 justify-content-center">
                                         <div class="custom_text34 bg_custom12">Vui lòng đọc kỹ Điều khoản và Điều kiện của chúng tôi để hiểu nội dung/liên kế nào được phép ở đây trên AddMeFast</div>
                                     </div>
                                 </div>
-                                <div class="d-flex d-lg-none justify-content-center my-4 flex-column justify-content-center align-items-center">
-                                    <div class="bg_custom10 bg_custom7 p-3">
-                                        <div class="custom_text35 bg_custom12">Tốc độ càng cao thì khả năng bạn bị nhìn thấy càng cao, đồng nghĩa với việc tốc độ hoàn thành nhiệm vụ sẽ cao. Bạn có thể thêm số lượng nhiệm vụ không giới hạn trong phần Nhiệm vụ P2P bằng cách sử dụng điểm AddMeFast của mình. Vui lòng đọc kỹ Điều khoản của chúng tôi một lần nữa để không đăng nội dung bị cấm ở đây.</div>
+                                <div class="d-flex justify-content-center my-4 flex-column justify-content-center align-items-center">
+                                    <div class="bg_custom7 p-3 col-12 ">
+                                        <div class="custom_text35">Tốc độ càng cao thì khả năng bạn bị nhìn thấy càng cao, đồng nghĩa với việc tốc độ hoàn thành nhiệm vụ sẽ cao. Bạn có thể thêm số lượng nhiệm vụ không giới hạn trong phần Nhiệm vụ P2P bằng cách sử dụng điểm AddMeFast của mình. Vui lòng đọc kỹ Điều khoản của chúng tôi một lần nữa để không đăng nội dung bị cấm ở đây.</div>
                                     </div>
                                 </div>
                             </div>
@@ -219,10 +225,10 @@
             </div>
         </div>
     </div>
-    <div class="position-fixed d-none d-lg-flex flex-column align-items-center bg_btn_help rounded-4 p-md-3 p-2 bg-white">
+    <button class="position-fixed d-none d-lg-flex flex-column align-items-center bg_btn_help rounded-4 p-md-3 p-2 bg-white">
         <img class="img_custom3" src="./icon/help.svg" alt="help">
         <div class="d-none d-lg-block ">Trợ Giúp</div>
-    </div>
+    </button>
     <div class="position-fixed bg_nav_bot col-12 d-block d-lg-none">
         <div class="d-flex  col-12 px-2">
             <div class="col-3 d-flex flex-column gap-1 align-items-center boder_nav_bot py-2">
