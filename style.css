@@ -1,5 +1,6 @@
 body{
     font-family: "Be Vietnam Pro", sans-serif;
+    background-color: #ffffff;
 }
 
 .color_primary{
@@ -64,7 +65,7 @@ body{
 
 .bg_login_left, .bg_login_right{
     padding: 50px;
-    height: 1040px;
+    height: 100vh;
 }
 
 .bg_login_left{
@@ -76,15 +77,12 @@ body{
     
 }
 
-.bg_boc{
-    background-color: #F9FAFB;
-}
-
 .bg_popup_login{
     padding: 40px ;
     border-radius: 36px;
-    top: calc(50% - 400px);
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     box-shadow: 0px 0px 8px -4px #10182808;
     box-shadow: 0px 0px 24px -4px #10182814;
@@ -93,8 +91,9 @@ body{
 .bg_popup_login1{
     padding: 40px ;
     border-radius: 36px;
-    top: calc(50% - 400px);
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     box-shadow: 0px 0px 8px -4px #10182808;
     box-shadow: 0px 0px 24px -4px #10182814;
@@ -104,8 +103,9 @@ body{
 .bg_popup_checkotp{
     padding: 40px ;
     border-radius: 36px;
-    top: 35% !important;
-    left: 33%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #ffffff;
     box-shadow: 0px 0px 8px -4px #10182808;
     box-shadow: 0px 0px 24px -4px #10182814;
@@ -373,7 +373,16 @@ body{
     font-weight: 400;
     line-height: 20px;
     text-align: left;
+    color: #444444;
+}
+
+.custom_text27::placeholder{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: left;
     color: #B6B6B6;
+    min-width: 155px;
 }
 
 .custom_text28{
@@ -424,7 +433,7 @@ body{
     font-weight: 600;
     line-height: 24px;
     text-align: left;
-    color: #444444;
+    color: #B6B6B6;
 }
 
 .custom_text32{
@@ -753,7 +762,6 @@ a{
 
 .container_login{
     max-width: 1440px !important;
-    max-height: 1280px;
 }
 
 .container_header{
@@ -1067,16 +1075,6 @@ a{
 }
 
 @media screen and (max-width: 1200px) {
-    .bg_popup_login{
-        top: calc(50% - 220px);
-        left: 4.1%;
-        padding: 32px 16px;
-    }
-    .bg_popup_login1{
-        padding: 32px 16px;
-        top: 130px;
-        left: 4.1%;
-    }
     
     .container_login{
         max-width: 1440px !important;
@@ -1088,6 +1086,10 @@ a{
         font-weight: 600;
         line-height: 60px;
         text-align: left;
+    }
+    .img_fix_pc{
+        width: 230px;
+        height: auto;
     }
 }
 
@@ -1146,7 +1148,7 @@ a{
         width: 350px;
     }
     .bg_login_left{
-        height: 1000px;
+        padding: 20px;
     }
 }
 
@@ -1223,10 +1225,12 @@ a{
         height: 20px;
     }
 
-    .bg_popup_login{
-        top: 130px;
-        left: 4.1%;
-        padding: 32px 16px;
+    .bg_login_left{
+        height: calc(100vh + 200px);
+    }
+
+    .bg_popup_login1{
+        top: calc(50% + 130px);
     }
 }
 
