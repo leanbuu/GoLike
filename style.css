@@ -150,6 +150,7 @@ body{
 .btn_show{
     bottom: 80px;
     background-color: transparent !important;
+    z-index: 10;
 }
 
 .border_bot_custom{
@@ -760,10 +761,6 @@ a{
     max-width: 100% !important;
 }
 
-.container_login{
-    max-width: 1440px !important;
-}
-
 .container_header{
     padding: 15px 32px !important;
 }
@@ -977,6 +974,7 @@ a{
     background-color: #D9302C;
     border-radius: 10px;
     cursor: pointer;
+    z-index: 10;
 
     >img{
         width: 8px;
